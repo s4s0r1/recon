@@ -55,7 +55,7 @@ cd wayback_data
 for i in $(cat ../all.txt);do echo $i | waybackurls ;done | tee -a wb.txt
 cat wb.txt  | sort -u | unfurl --unique keys | tee -a paramlist.txt
 
-cat wb.txt u | grep -P "\w+\.js(\?|$)" | sort -u | tee -a jsurls.txt
+cat wb.txt  | grep -P "\w+\.js(\?|$)" | sort -u | tee -a jsurls.txt
 
 cat wb.txt  | grep -P "\w+\.php(\?|$)" | sort -u  | tee -a phpurls.txt
 
